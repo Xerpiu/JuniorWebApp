@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p class="display-3">Panel sterowania</p>
+<br />
+
+<a class="page-link" asp-area="" asp-controller="Product" asp-action="GetProducts">Pokaż listę produktów</a>
+<br />
+
+<h2>Dodaj produkt</h2>
+
+<form action="product/postproduct" method="post">
+    <div class="form-group">
+        <input name="name" class="form-control" type="text" maxlength="100" placeholder="Nazwa produktu" />
+        <br />
+        <input name="price" class="form-control" type="number" step="any" placeholder="Cena produktu" />
+        <br />
+        <button type="submit" class="btn btn-success">Dodaj</button>
+    </div>
+</form>
+
+<h2>Wyświetl produkt</h2>
+
+<form action="product/getproduct" method="get">
+    <div class="form-group">
+        <input name="id" class="form-control" type="text" placeholder="ID produktu" />
+        <br />
+        <button type="submit" class="btn btn-dark">Wyświetl</button>
+    </div>
+</form>
+
+<h2>Usuń produkt</h2>
+
+<form action="product/deleteproduct" method="delete">
+    <div class="form-group">
+        <input name="id" class="form-control" type="text" placeholder="ID produktu" />
+        <br />
+        <button type="submit" class="btn btn-danger">Usuń</button>
+    </div>
+</form>
+
+<h2>Aktualizuj produkt</h2>
+
+<form action="product/putproduct" method="put">
+    <div class="form-group">
+        <input name="id" class="form-control" type="text" placeholder="ID produktu" />
+        <br />
+        <input name="name" class="form-control" type="text" maxlength="100" placeholder="Nazwa produktu" />
+        <br />
+        <input name="price" class="form-control" type="number" step=".01" placeholder="Cena produktu" />
+        <br />
+        <button type="submit" class="btn btn-primary">Aktualizuj</button>
+    </div>
+</form>

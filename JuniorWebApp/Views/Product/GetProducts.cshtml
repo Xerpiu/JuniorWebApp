@@ -1,0 +1,17 @@
+﻿@model Product[]
+@{
+    var productCount = Model.Length;
+
+    ViewData["Title"] = "Produkty (" + productCount + ")";
+}
+
+<h1>Dostępne produkty (@Model.Length)</h1> <br />
+
+@foreach (var product in Model)
+{
+    <div class="border border-success rounded">
+        <p class="h4">Identyfikator: <small class="text-muted">@product.Id</small></p>
+        <p class="h4">Nazwa produktu: <small class="text-muted">@product.Name</small></p>
+        <p class="h4">Cena: <small class="text-muted">@product.Price</small></p>
+    </div> <br />
+}

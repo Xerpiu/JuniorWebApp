@@ -1,0 +1,12 @@
+﻿@model ProductUpdateRequestDto
+@{
+    ViewData["Title"] = "Aktualizacja";
+}
+
+<p class="display-3">Aktualizacja zakończona</p> <br />
+
+<div class="border border-success rounded">
+    <p class="h4">Identyfikator: <small class="text-muted">@Model.Id</small></p>
+    <p class="h4">Nazwa produktu: <small class="text-muted">@Model.Name</small></p>
+    <p class="h4">Cena: <small class="text-muted">@Model.Price</small></p>
+</div>
